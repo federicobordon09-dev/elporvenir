@@ -1,6 +1,5 @@
 import Hero from "@/components/hero";
 import About from "@/components/about";
-import PlatosDestacados from "@/components/platos-destacados";
 import Galeria from "@/components/galeria";
 import PhotoDivider from "@/components/photo-divider";
 import Horarios from "@/components/horarios";
@@ -34,8 +33,6 @@ export default function Home() {
           </p>
         </div>
       </PhotoDivider>
-
-      <PlatosDestacados />
 
       <Galeria />
 

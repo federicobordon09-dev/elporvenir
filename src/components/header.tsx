@@ -8,7 +8,7 @@ import { images } from "@/lib/imagenes";
 
 const nav = [
   { label: "El lugar", href: "#about" },
-  { label: "Platos", href: "#platos" },
+  { label: "Galería", href: "#galeria" },
   { label: "Horarios", href: "#horarios" },
   { label: "Contacto", href: "#contacto" },
 ];
