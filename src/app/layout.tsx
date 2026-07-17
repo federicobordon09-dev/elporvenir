@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Bangers, Lora } from "next/font/google";
+import Script from "next/script";
 import Header from "@/components/header";
 import { negocio } from "@/content/negocio";
 import "./globals.css";
@@ -149,7 +150,10 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()) }}
         />
-        <script dangerouslySetInnerHTML={{ __html: "history.scrollRestoration='manual';window.scrollTo(0,0)" }} />
+        <Script
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: "history.scrollRestoration='manual';window.scrollTo(0,0)" }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
       </body>
