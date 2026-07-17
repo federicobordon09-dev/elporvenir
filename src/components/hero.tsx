@@ -94,12 +94,15 @@ export default function Hero() {
             </svg>
             Reservá por WhatsApp
           </a>
-          <a
-            href="#about"
+          <button
+            type="button"
+            onClick={() => {
+              document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+            }}
             className="inline-flex items-center justify-center font-display text-sm tracking-wider text-papel/90 hover:text-papel border border-papel/40 hover:border-papel/70 min-h-[52px] px-6 py-3 rounded-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-papel focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
           >
             Conocé el lugar
-          </a>
+          </button>
         </motion.div>
       </div>
 

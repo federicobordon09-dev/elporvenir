@@ -8,7 +8,7 @@ const galeriaImages = [
   { img: images.esparragos, alt: "Comida casera en El Porvenir", span: "md:col-span-2 md:row-span-2" },
   { img: images.choripan, alt: "Preparación del día en El Porvenir", span: "" },
   { img: images.albondigas, alt: "Especialidad de la casa en El Porvenir", span: "" },
-  { img: images.canelones, alt: " elaboración en el bodegón El Porvenir", span: "md:col-span-2" },
+  { img: images.canelones, alt: "Canelones elaboración en el bodegón El Porvenir", span: "md:col-span-2" },
   { img: images.sorrentinos, alt: "Pasta fresca en El Porvenir", span: "" },
   { img: images.papas, alt: "Guarnición servida en El Porvenir", span: "" },
   { img: images.crocante, alt: "Postre casero en El Porvenir", span: "" },

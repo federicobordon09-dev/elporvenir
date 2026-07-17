@@ -12,13 +12,4 @@ export const images = {
   crocante: "/images/crocante.jpg",
   chipirones: "/images/chipirones.jpg",
   canelones: "/images/canelones.jpg",
-  corzetti: "/images/corzetti.jpg",
-  hojaldre: "/images/hojaldre.jpg",
-  tostada: "/images/tostada.jpg",
-  omelet: "/images/omelet.jpg",
-  tiradito: "/images/tiradito.jpg",
-  paleta: "/images/paleta.jpg",
-  pollo: "/images/pollo.jpg",
-  sandwich: "/images/sandwich.jpg",
-  risotto: "/images/risotto.jpg",
 } as const;
