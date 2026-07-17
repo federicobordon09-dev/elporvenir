@@ -19,7 +19,7 @@ const lora = Lora({
 const siteTitle = "El Porvenir - La Consulta, Mendoza";
 const siteDescription =
   "Bodegón renovado en el corazón de La Consulta. Cocina sincera, platos abundantes, productos de estación y productores locales.";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://elporvemza.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://elporvenir-sigma.vercel.app";
 const ogImage = "/images/gastronomia.jpg";
 
 export const metadata: Metadata = {

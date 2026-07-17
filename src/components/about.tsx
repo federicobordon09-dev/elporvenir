@@ -29,7 +29,7 @@ export default function About() {
   });
 
   return (
-    <section id="about" className="relative py-24 md:py-32 px-4 bg-papel overflow-hidden">
+    <section id="about" className="relative py-12 md:py-20 px-4 bg-papel overflow-hidden">
       <div className="absolute top-0 left-0 w-64 h-64 bg-ladrillo/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-oliva/5 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl pointer-events-none" />
 
@@ -39,7 +39,7 @@ export default function About() {
             <div className="relative z-10 rounded-sm overflow-hidden border-4 border-papel shadow-2xl shadow-texto/10">
               <Image
                 src={images.carbonara}
-                alt="Feruccini a la carbonara con guancialle - plato de El Porvenir"
+                alt="Feruccini a la carbonara con guanciale - plato de El Porvenir"
                 width={600}
                 height={750}
                 className="w-full h-auto object-cover"

@@ -60,6 +60,6 @@ export const negocio = {
       url: "https://facebook.com/elporvenirmza",
     },
   },
-  mapaEmbedUrl: "https://maps.google.com/maps?q=San+Mart%C3%ADn+102+La+Consulta+Mendoza&output=embed",
-  mapaLink: "https://maps.google.com/maps?q=San+Mart%C3%ADn+102,+La+Consulta,+San+Carlos,+Mendoza",
+  mapaEmbedUrl: "https://maps.google.com/maps?q=El+Porvenir+La+Consulta+Mendoza&output=embed&hl=es",
+  mapaLink: "https://maps.app.goo.gl/5MCk7SCAhgycdiUT7",
 };

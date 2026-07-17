@@ -52,13 +52,46 @@ function DiaFila({ dia, index }: { dia: (typeof negocio.horarios)[0]; index: num
   );
 }
 
+function DiaCard({ dia, index }: { dia: (typeof negocio.horarios)[0]; index: number }) {
+  const hoy = new Date().getDay();
+  const esHoy = dias[hoy] === dia.dia;
+
+  return (
+    <motion.div
+      suppressHydrationWarning
+      initial={{ opacity: 0, x: -16 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.35, delay: index * 0.1, ease: "easeOut" }}
+      className={`flex items-center justify-between px-4 py-3 rounded-sm transition-all duration-300 ${
+        esHoy
+          ? "bg-ladrillo/10 border-l-4 border-mostaza font-bold"
+          : "bg-papel border-l-4 border-transparent"
+      }`}
+    >
+      <span className="font-display text-ladrillo text-base">{dia.dia}</span>
+      {dia.mediodia && dia.cena ? (
+        <div className="text-right text-texto/80 font-serif text-xs leading-snug">
+          <span>{dia.mediodia}</span>
+          <span className="text-mostaza block text-[10px] tracking-widest">────</span>
+          <span>{dia.cena}</span>
+        </div>
+      ) : dia.mediodia ? (
+        <span className="text-texto/80 font-serif text-xs">{dia.mediodia}</span>
+      ) : (
+        <span className="font-display text-ladrillo/40 tracking-widest text-xs">✕ CERRADO</span>
+      )}
+    </motion.div>
+  );
+}
+
 export default function Horarios() {
   const prefersReduced = useReducedMotion();
   const { horarios, ubicacion, mapaLink, mapaEmbedUrl } = negocio;
   const orden = [1, 2, 3, 4, 5, 6, 0];
 
   return (
-    <section id="horarios" className="relative py-24 md:py-32 px-4 bg-papel overflow-hidden">
+    <section id="horarios" className="relative py-12 md:py-20 px-4 bg-papel overflow-hidden">
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_50%_50%,_#6B3A2E_1px,transparent_1px)] bg-[length:32px_32px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative">
@@ -68,7 +101,7 @@ export default function Horarios() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.4 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <p className="font-serif text-oliva text-sm md:text-base tracking-[0.25em] uppercase mb-3">
             Visitanos
@@ -81,14 +114,21 @@ export default function Horarios() {
 
         <div className="grid md:grid-cols-5 gap-8 md:gap-12">
           <div className="md:col-span-2">
-            <div className="bg-papel-oscuro border-2 border-texto/10 p-6 md:p-8 rounded-sm relative transition-shadow duration-300 hover:shadow-lg">
+            <div className="bg-papel-oscuro border-2 border-texto/10 p-4 md:p-8 rounded-sm relative transition-shadow duration-300 hover:shadow-lg">
               <div className="absolute -top-3 left-6 bg-papel-oscuro px-3 flex items-center gap-2 text-ladrillo/60">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span className="font-display text-xs tracking-wider">HORARIOS</span>
               </div>
-              <table className="w-full mt-2">
+
+              <div className="flex flex-col gap-2 mt-2 md:hidden">
+                {orden.map((i) => (
+                  <DiaCard key={horarios[i].dia} dia={horarios[i]} index={i} />
+                ))}
+              </div>
+
+              <table className="w-full mt-2 hidden md:table">
                 <tbody>
                   {orden.map((i) => (
                     <DiaFila key={horarios[i].dia} dia={horarios[i]} index={i} />

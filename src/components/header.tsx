@@ -37,11 +37,11 @@ export default function Header() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <a href="/" className="flex items-center gap-3 group min-h-[44px] py-1">
+        <a href="/" aria-label="Ir al inicio" className="flex items-center gap-3 group min-h-[44px] py-1">
           <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-mostaza/30 group-hover:border-mostaza transition-colors flex-shrink-0">
             <Image
               src={images.logo}
-              alt={`${negocio.nombre} - inicio`}
+              alt=""
               fill
               className="object-cover"
               sizes="48px"

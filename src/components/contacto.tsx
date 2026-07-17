@@ -45,7 +45,7 @@ function Icon({ name }: { name: string }) {
 export default function Contacto() {
   const { contacto, ubicacion } = negocio;
   return (
-    <section id="contacto" className="relative py-24 md:py-32 px-4 bg-papel overflow-hidden">
+    <section id="contacto" className="relative py-12 md:py-20 px-4 bg-papel overflow-hidden">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-oliva/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-5xl mx-auto text-center relative">
