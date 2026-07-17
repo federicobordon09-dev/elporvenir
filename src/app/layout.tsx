@@ -54,6 +54,10 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteUrl),
   robots: { index: true, follow: true },
+  icons: {
+    icon: "/images/logo_elporvenir.jpg",
+    apple: "/images/logo_elporvenir.jpg",
+  },
 };
 
 export const viewport: Viewport = {
