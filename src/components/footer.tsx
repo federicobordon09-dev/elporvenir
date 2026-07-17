@@ -1,4 +1,7 @@
+"use client";
+
 import { negocio } from "@/content/negocio";
+import SmoothLink from "@/components/smooth-link";
 
 export default function Footer() {
   const { nombre, ubicacion, contacto } = negocio;
@@ -10,17 +13,16 @@ export default function Footer() {
           <nav className="flex items-center gap-4" aria-label="Navegación del pie">
             {[
               { label: "El lugar", href: "#about" },
-              { label: "Platos", href: "#platos" },
+              { label: "Galería", href: "#galeria" },
               { label: "Horarios", href: "#horarios" },
               { label: "Contacto", href: "#contacto" },
             ].map((item) => (
-              <a
+              <SmoothLink
                 key={item.href}
                 href={item.href}
+                label={item.label}
                 className="inline-flex items-center min-h-[44px] font-serif text-xs text-papel/50 hover:text-papel tracking-wider uppercase transition-colors focus:outline-none focus-visible:text-papel focus-visible:underline"
-              >
-                {item.label}
-              </a>
+              />
             ))}
           </nav>
           <div className="flex items-center gap-3">

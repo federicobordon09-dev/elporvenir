@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { negocio } from "@/content/negocio";
 import { images } from "@/lib/imagenes";
+import SmoothLink from "@/components/smooth-link";
 
 const nav = [
   { label: "El lugar", href: "#about" },
@@ -58,17 +59,16 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-6" aria-label="Navegación principal">
           {nav.map((item) => (
-            <a
+            <SmoothLink
               key={item.href}
               href={item.href}
+              label={item.label}
               className={`inline-flex items-center min-h-[44px] font-display text-sm tracking-wider transition-colors hover:text-mostaza focus:outline-none focus-visible:text-mostaza focus-visible:underline ${
                 scrolled ? "text-texto/70" : "text-papel/80"
               }`}
-            >
-              {item.label}
-            </a>
+            />
           ))}
-          <a
+        <a
             href={`https://wa.me/${negocio.contacto.telefonoLink}`}
             target="_blank"
             rel="noopener noreferrer"
