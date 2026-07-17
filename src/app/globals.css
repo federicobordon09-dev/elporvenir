@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-papel: #F2E8D5;
+  --color-ladrillo: #6B3A2E;
+  --color-oliva: #8A9A5B;
+  --color-mostaza: #C9A227;
+  --color-texto: #2B2521;
+  --color-papel-claro: #F9F3E8;
+  --color-papel-oscuro: #E8DCC5;
+  --color-ladrillo-claro: #8B4E40;
+  --color-oliva-claro: #A8B87A;
+  --color-mostaza-claro: #D9B84A;
+  --font-display: "Bangers", cursive;
+  --font-serif: "Lora", serif;
+}
+
+body {
+  background: var(--color-papel);
+  color: var(--color-texto);
+  font-family: var(--font-serif);
+}
+
+::selection {
+  background: var(--color-mostaza);
+  color: var(--color-texto);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.3); }
+  50% { box-shadow: 0 0 20px 4px rgba(201, 162, 39, 0.15); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-600 { animation-delay: 600ms; }
